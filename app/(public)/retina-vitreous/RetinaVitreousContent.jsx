@@ -63,21 +63,21 @@ export default function RetinaVitreousContent() {
         <AnimateOnScroll stagger>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Layers size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Rhegmatogenous Detachment</h3>
               <p className="step-desc">The most common type, caused by tears or holes in the retina that allow fluid to seep underneath, separating the retina from its supporting tissue.</p>
             </div>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Wrench size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Tractional Detachment</h3>
               <p className="step-desc">Fibrous tissue grows on the retinal surface and contracts, pulling the retina away from its underlying layer. Often associated with diabetic retinopathy.</p>
             </div>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Eye size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Exudative Detachment</h3>
@@ -116,8 +116,8 @@ export default function RetinaVitreousContent() {
               ))}
             </div>
             <div style={{
-              background: 'rgba(212,145,110,0.08)',
-              border: '1px solid rgba(212,145,110,0.2)',
+              background: 'rgba(74,111,165,0.08)',
+              border: '1px solid rgba(74,111,165,0.2)',
               borderRadius: 'var(--radius-lg)',
               padding: 32,
               display: 'flex',
@@ -177,7 +177,7 @@ export default function RetinaVitreousContent() {
         <AnimateOnScroll>
           <div className="section-header" style={{ marginBottom: 48 }}>
             <h2 className="section-title centered" style={{ color: 'var(--text-light)' }}>Our Technology</h2>
-            <p className="section-subtitle centered" style={{ color: 'rgba(243,235,226,0.6)', textAlign: 'center' }}>
+            <p className="section-subtitle centered" style={{ color: 'rgba(232,237,245,0.6)', textAlign: 'center' }}>
               World-class vitreoretinal surgical infrastructure for the most complex retinal conditions.
             </p>
           </div>
@@ -185,7 +185,7 @@ export default function RetinaVitreousContent() {
         <AnimateOnScroll stagger>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <ScanEye size={28} color="var(--primary)" />
               </div>
               <h3>Advanced Retinal Imaging</h3>
@@ -194,7 +194,7 @@ export default function RetinaVitreousContent() {
               </p>
             </div>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Eye size={28} color="var(--primary)" />
               </div>
               <h3>Alcon Constellation Surgical System</h3>
@@ -274,7 +274,7 @@ export default function RetinaVitreousContent() {
         <h2 style={{ fontSize: 42, fontWeight: 700, color: 'var(--text-light)', letterSpacing: -0.5 }}>
           Don't Ignore the Warning Signs
         </h2>
-        <p style={{ fontSize: 16, color: 'rgba(243,235,226,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 16, color: 'rgba(232,237,245,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
           Sudden floaters, flashes, or vision changes require immediate evaluation. Our retina specialists are ready to protect your sight.
         </p>
         <div className="cta-buttons">

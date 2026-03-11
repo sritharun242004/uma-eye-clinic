@@ -160,7 +160,7 @@ export default function CataractContent() {
         <AnimateOnScroll>
           <div className="section-header" style={{ marginBottom: 48 }}>
             <h2 className="section-title centered" style={{ color: 'var(--text-light)' }}>Our Technology</h2>
-            <p className="section-subtitle centered" style={{ color: 'rgba(243,235,226,0.6)', textAlign: 'center' }}>
+            <p className="section-subtitle centered" style={{ color: 'rgba(232,237,245,0.6)', textAlign: 'center' }}>
               Uma Eye Clinic is equipped with the latest cataract surgery technology to deliver world-class results.
             </p>
           </div>
@@ -168,7 +168,7 @@ export default function CataractContent() {
         <AnimateOnScroll stagger>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Crosshair size={28} color="var(--primary)" />
               </div>
               <h3>Catalys Femtosecond Laser</h3>
@@ -177,7 +177,7 @@ export default function CataractContent() {
               </p>
             </div>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Microscope size={28} color="var(--primary)" />
               </div>
               <h3>3D Digital Microscope</h3>
@@ -257,7 +257,7 @@ export default function CataractContent() {
         <h2 style={{ fontSize: 42, fontWeight: 700, color: 'var(--text-light)', letterSpacing: -0.5 }}>
           Restore Your Clear Vision Today
         </h2>
-        <p style={{ fontSize: 16, color: 'rgba(243,235,226,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 16, color: 'rgba(232,237,245,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
           Don't let cataracts hold you back. Experience world-class cataract surgery with advanced femtosecond laser technology and premium IOL options at Uma Eye Clinic.
         </p>
         <div className="cta-buttons">

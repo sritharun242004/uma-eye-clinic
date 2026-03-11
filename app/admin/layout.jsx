@@ -55,7 +55,7 @@ export default function AdminLayout({ children }) {
                   fontSize: 14,
                   fontWeight: isActive ? 600 : 400,
                   color: isActive ? '#fff' : 'rgba(255,255,255,0.6)',
-                  background: isActive ? 'rgba(212,145,110,0.2)' : 'transparent',
+                  background: isActive ? 'rgba(74,111,165,0.2)' : 'transparent',
                   textDecoration: 'none',
                   transition: 'all 0.2s',
                 }}

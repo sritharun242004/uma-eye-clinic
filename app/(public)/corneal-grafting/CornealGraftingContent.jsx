@@ -211,7 +211,7 @@ export default function CornealGraftingContent() {
         <AnimateOnScroll>
           <div className="section-header" style={{ marginBottom: 48 }}>
             <h2 className="section-title centered" style={{ color: 'var(--text-light)' }}>Recovery Guidelines</h2>
-            <p className="section-subtitle centered" style={{ color: 'rgba(243,235,226,0.6)', textAlign: 'center' }}>
+            <p className="section-subtitle centered" style={{ color: 'rgba(232,237,245,0.6)', textAlign: 'center' }}>
               Following these guidelines carefully is essential for optimal healing and graft survival after corneal transplantation.
             </p>
           </div>
@@ -219,7 +219,7 @@ export default function CornealGraftingContent() {
         <AnimateOnScroll stagger>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <AlertCircle size={28} color="var(--primary)" />
               </div>
               <h3>Important Precautions</h3>
@@ -228,7 +228,7 @@ export default function CornealGraftingContent() {
               </p>
             </div>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <ClockIcon size={28} color="var(--primary)" />
               </div>
               <h3>What to Expect</h3>
@@ -308,7 +308,7 @@ export default function CornealGraftingContent() {
         <h2 style={{ fontSize: 42, fontWeight: 700, color: 'var(--text-light)', letterSpacing: -0.5 }}>
           Restore Your Corneal Health Today
         </h2>
-        <p style={{ fontSize: 16, color: 'rgba(243,235,226,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 16, color: 'rgba(232,237,245,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
           Whether you need a corneal transplant or treatment for keratoconus, our corneal specialists are here to help. Book your consultation at Uma Eye Clinic today.
         </p>
         <div className="cta-buttons">

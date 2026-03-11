@@ -63,21 +63,21 @@ export default function SquintContent() {
         <AnimateOnScroll stagger>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Eye size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Muscle Imbalance</h3>
               <p className="step-desc">Each eye is controlled by six muscles. When these muscles do not work in coordination, the eyes become misaligned — turning inward, outward, upward, or downward.</p>
             </div>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Baby size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Common in Children</h3>
               <p className="step-desc">While newborns' eyes are typically misaligned, they should be aligned by 3-4 weeks of age. Persistent misalignment beyond this point requires prompt evaluation and treatment.</p>
             </div>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <AlertTriangle size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Will Not Self-Correct</h3>
@@ -116,8 +116,8 @@ export default function SquintContent() {
               ))}
             </div>
             <div style={{
-              background: 'rgba(212,145,110,0.08)',
-              border: '1px solid rgba(212,145,110,0.2)',
+              background: 'rgba(74,111,165,0.08)',
+              border: '1px solid rgba(74,111,165,0.2)',
               borderRadius: 'var(--radius-lg)',
               padding: 32,
               display: 'flex',
@@ -176,7 +176,7 @@ export default function SquintContent() {
         <AnimateOnScroll>
           <div className="section-header" style={{ marginBottom: 48 }}>
             <h2 className="section-title centered" style={{ color: 'var(--text-light)' }}>Our Approach</h2>
-            <p className="section-subtitle centered" style={{ color: 'rgba(243,235,226,0.6)', textAlign: 'center' }}>
+            <p className="section-subtitle centered" style={{ color: 'rgba(232,237,245,0.6)', textAlign: 'center' }}>
               A multidisciplinary approach combining optical, therapeutic, and surgical interventions for the best outcomes.
             </p>
           </div>
@@ -184,7 +184,7 @@ export default function SquintContent() {
         <AnimateOnScroll stagger>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Baby size={28} color="var(--primary)" />
               </div>
               <h3>Paediatric Squint Care</h3>
@@ -193,7 +193,7 @@ export default function SquintContent() {
               </p>
             </div>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Scissors size={28} color="var(--primary)" />
               </div>
               <h3>Precision Strabismus Surgery</h3>
@@ -273,7 +273,7 @@ export default function SquintContent() {
         <h2 style={{ fontSize: 42, fontWeight: 700, color: 'var(--text-light)', letterSpacing: -0.5 }}>
           Early Intervention Changes Lives
         </h2>
-        <p style={{ fontSize: 16, color: 'rgba(243,235,226,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 16, color: 'rgba(232,237,245,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
           Squint will not correct itself. The sooner treatment begins, the better the outcome. Book a comprehensive squint assessment at Uma Eye Clinic today.
         </p>
         <div className="cta-buttons">

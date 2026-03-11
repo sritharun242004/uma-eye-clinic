@@ -72,21 +72,21 @@ export default function TreatmentsContent() {
         <AnimateOnScroll stagger>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Zap size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Lightning Fast</h3>
               <p className="step-desc">The entire laser procedure takes just 8 seconds per eye — the fastest refractive surgery available today.</p>
             </div>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <ShieldCheck size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Flapless & Safe</h3>
               <p className="step-desc">No corneal flap means greater structural integrity, reduced dry eye risk, and enhanced long-term stability.</p>
             </div>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Minimize size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Minimally Invasive</h3>
@@ -126,8 +126,8 @@ export default function TreatmentsContent() {
               ))}
             </div>
             <div style={{
-              background: 'rgba(212,145,110,0.08)',
-              border: '1px solid rgba(212,145,110,0.2)',
+              background: 'rgba(74,111,165,0.08)',
+              border: '1px solid rgba(74,111,165,0.2)',
               borderRadius: 'var(--radius-lg)',
               padding: 32,
               display: 'flex',
@@ -186,7 +186,7 @@ export default function TreatmentsContent() {
         <AnimateOnScroll>
           <div className="section-header" style={{ marginBottom: 48 }}>
             <h2 className="section-title centered" style={{ color: 'var(--text-light)' }}>Our Technology</h2>
-            <p className="section-subtitle centered" style={{ color: 'rgba(243,235,226,0.6)', textAlign: 'center' }}>
+            <p className="section-subtitle centered" style={{ color: 'rgba(232,237,245,0.6)', textAlign: 'center' }}>
               Uma Eye Clinic invests in the most advanced ophthalmic technology to deliver world-class outcomes.
             </p>
           </div>
@@ -194,7 +194,7 @@ export default function TreatmentsContent() {
         <AnimateOnScroll stagger>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Eye size={28} color="var(--primary)" />
               </div>
               <h3>ZEISS VISUMAX 800</h3>
@@ -203,7 +203,7 @@ export default function TreatmentsContent() {
               </p>
             </div>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <ScanEye size={28} color="var(--primary)" />
               </div>
               <h3>Advanced Diagnostics</h3>
@@ -329,7 +329,7 @@ export default function TreatmentsContent() {
         <h2 style={{ fontSize: 42, fontWeight: 700, color: 'var(--text-light)', letterSpacing: -0.5 }}>
           Ready to See the World Clearly?
         </h2>
-        <p style={{ fontSize: 16, color: 'rgba(243,235,226,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 16, color: 'rgba(232,237,245,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
           Take the first step towards a life free from glasses and contact lenses. Book your SMILE PRO consultation at Uma Eye Clinic today.
         </p>
         <div className="cta-buttons">

@@ -58,8 +58,8 @@ export default function Navbar() {
     const onScroll = () => {
       const nav = document.querySelector('.navbar')
       if (nav) nav.style.boxShadow = window.scrollY > 50
-        ? '0 4px 20px rgba(197,190,182,0.35)'
-        : '0 2px 8px rgba(197,190,182,0.25)'
+        ? '0 4px 20px rgba(13,27,42,0.12)'
+        : '0 2px 8px rgba(13,27,42,0.06)'
     }
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)

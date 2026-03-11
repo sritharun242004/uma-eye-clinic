@@ -320,7 +320,7 @@ export default function LasikContent() {
         <h2 style={{ fontSize: 42, fontWeight: 700, color: 'var(--text-light)', letterSpacing: -0.5 }}>
           Ready for a Life Without Glasses?
         </h2>
-        <p style={{ fontSize: 16, color: 'rgba(243,235,226,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 16, color: 'rgba(232,237,245,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
           Join millions worldwide who have experienced the freedom of LASIK. Book your consultation at Uma Eye Clinic and take the first step towards clear, unaided vision.
         </p>
         <div className="cta-buttons">

@@ -130,8 +130,8 @@ export default function Training() {
                     '300+ alumni across India and abroad'
                   ].map((item, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <CheckCircle size={18} color="rgba(243,235,226,0.8)" />
-                      <span style={{ fontSize: '14px', color: 'rgba(243,235,226,0.87)', fontWeight: 500 }}>
+                      <CheckCircle size={18} color="rgba(232,237,245,0.8)" />
+                      <span style={{ fontSize: '14px', color: 'rgba(232,237,245,0.87)', fontWeight: 500 }}>
                         {item}
                       </span>
                     </div>
@@ -165,12 +165,12 @@ export default function Training() {
             </div>
             <div style={{ display: 'flex', gap: '32px', marginTop: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Phone size={16} color="rgba(243,235,226,0.6)" />
-                <a href="tel:+914449023232" style={{ fontSize: '14px', color: 'rgba(243,235,226,0.6)' }}>+91 44 49023232</a>
+                <Phone size={16} color="rgba(232,237,245,0.6)" />
+                <a href="tel:+914449023232" style={{ fontSize: '14px', color: 'rgba(232,237,245,0.6)' }}>+91 44 49023232</a>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Mail size={16} color="rgba(243,235,226,0.6)" />
-                <a href="mailto:info@umaeyeclinic.in" style={{ fontSize: '14px', color: 'rgba(243,235,226,0.6)' }}>info@umaeyeclinic.in</a>
+                <Mail size={16} color="rgba(232,237,245,0.6)" />
+                <a href="mailto:info@umaeyeclinic.in" style={{ fontSize: '14px', color: 'rgba(232,237,245,0.6)' }}>info@umaeyeclinic.in</a>
               </div>
             </div>
           </div>

@@ -77,7 +77,7 @@ export default function HomeContent() {
           ))}
           <div className="home-hero-content">
             <div className="home-hero-actions">
-              <Link href="/contact" className="hero-cta-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '18px 40px', fontSize: 16, fontWeight: 700, borderRadius: 50, background: 'var(--primary)', color: '#fff', textDecoration: 'none', boxShadow: '0 6px 28px rgba(212,145,110,0.5)', animation: 'heroPulse 2s ease-in-out infinite' }}>
+              <Link href="/contact" className="hero-cta-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '18px 40px', fontSize: 16, fontWeight: 700, borderRadius: 50, background: 'var(--primary)', color: '#fff', textDecoration: 'none', boxShadow: '0 6px 28px rgba(74,111,165,0.5)', animation: 'heroPulse 2s ease-in-out infinite' }}>
                 <Calendar size={20} />
                 Book an Appointment
               </Link>

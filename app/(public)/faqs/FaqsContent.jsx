@@ -245,7 +245,7 @@ export default function FaqsContent() {
       {/* Still Have Questions CTA */}
       <AnimateOnScroll>
         <section className="faq-cta">
-          <div className="involve-icon-circle" style={{ background: 'rgba(212,145,110,0.12)' }}>
+          <div className="involve-icon-circle" style={{ background: 'rgba(74,111,165,0.12)' }}>
             <HelpCircle size={32} color="var(--primary)" />
           </div>
           <h2 className="section-title centered">Still Have Questions?</h2>

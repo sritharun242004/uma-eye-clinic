@@ -147,7 +147,7 @@ export default function GlaucomaContent() {
         <AnimateOnScroll>
           <div className="section-header" style={{ marginBottom: 48 }}>
             <h2 className="section-title centered" style={{ color: 'var(--text-light)' }}>Advanced Diagnostics</h2>
-            <p className="section-subtitle centered" style={{ color: 'rgba(243,235,226,0.6)', textAlign: 'center' }}>
+            <p className="section-subtitle centered" style={{ color: 'rgba(232,237,245,0.6)', textAlign: 'center' }}>
               Uma Eye Clinic uses the latest diagnostic technology to detect glaucoma at its earliest stages and monitor progression precisely.
             </p>
           </div>
@@ -161,7 +161,7 @@ export default function GlaucomaContent() {
               { title: 'OCT-Angiovue', icon: <Activity size={28} color="var(--primary)" />, desc: 'Advanced OCT-Angiovue technology visualises blood flow in the optic nerve and retina without injectable dyes. This non-invasive vascular imaging helps assess the microvascular health of the optic nerve head for earlier and more accurate glaucoma detection.' }
             ].map(({ title, icon, desc }, i) => (
               <div className="tech-card" key={i}>
-                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   {icon}
                 </div>
                 <h3>{title}</h3>
@@ -269,7 +269,7 @@ export default function GlaucomaContent() {
         <h2 style={{ fontSize: 42, fontWeight: 700, color: 'var(--text-light)', letterSpacing: -0.5 }}>
           Protect Your Vision Before It's Too Late
         </h2>
-        <p style={{ fontSize: 16, color: 'rgba(243,235,226,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 16, color: 'rgba(232,237,245,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
           Glaucoma damage is irreversible, but early detection can save your sight. Schedule a comprehensive glaucoma screening at Uma Eye Clinic today.
         </p>
         <div className="cta-buttons">

@@ -63,21 +63,21 @@ export default function DryEyesContent() {
         <AnimateOnScroll stagger>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Droplets size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Tear Film Dysfunction</h3>
               <p className="step-desc">The tear film has three layers — oil, water, and mucin. When any layer is compromised, tears evaporate too quickly or fail to spread evenly, causing chronic irritation and blurred vision.</p>
             </div>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Monitor size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Reduced Blinking</h3>
               <p className="step-desc">Normal blink rate is 8-12 times per minute in infants and 4-6 in adults. During focused activities like screen use, it drops to just 1-2 blinks per minute, starving the eyes of essential moisture.</p>
             </div>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Wind size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Environmental Factors</h3>
@@ -117,8 +117,8 @@ export default function DryEyesContent() {
               ))}
             </div>
             <div style={{
-              background: 'rgba(212,145,110,0.08)',
-              border: '1px solid rgba(212,145,110,0.2)',
+              background: 'rgba(74,111,165,0.08)',
+              border: '1px solid rgba(74,111,165,0.2)',
               borderRadius: 'var(--radius-lg)',
               padding: 32,
               display: 'flex',
@@ -177,7 +177,7 @@ export default function DryEyesContent() {
         <AnimateOnScroll>
           <div className="section-header" style={{ marginBottom: 48 }}>
             <h2 className="section-title centered" style={{ color: 'var(--text-light)' }}>Our Technology</h2>
-            <p className="section-subtitle centered" style={{ color: 'rgba(243,235,226,0.6)', textAlign: 'center' }}>
+            <p className="section-subtitle centered" style={{ color: 'rgba(232,237,245,0.6)', textAlign: 'center' }}>
               Advanced diagnostic and treatment systems for comprehensive dry eye management.
             </p>
           </div>
@@ -185,7 +185,7 @@ export default function DryEyesContent() {
         <AnimateOnScroll stagger>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <ScanEye size={28} color="var(--primary)" />
               </div>
               <h3>LIPISCAN Imaging</h3>
@@ -194,7 +194,7 @@ export default function DryEyesContent() {
               </p>
             </div>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Thermometer size={28} color="var(--primary)" />
               </div>
               <h3>LIPIFLOW Thermal Pulsation</h3>
@@ -274,7 +274,7 @@ export default function DryEyesContent() {
         <h2 style={{ fontSize: 42, fontWeight: 700, color: 'var(--text-light)', letterSpacing: -0.5 }}>
           End the Cycle of Dry Eye Discomfort
         </h2>
-        <p style={{ fontSize: 16, color: 'rgba(243,235,226,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 16, color: 'rgba(232,237,245,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
           Stop relying on temporary drops. Get a comprehensive dry eye assessment and discover how LIPIFLOW can provide lasting relief.
         </p>
         <div className="cta-buttons">

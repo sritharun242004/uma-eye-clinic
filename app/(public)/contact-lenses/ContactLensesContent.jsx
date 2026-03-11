@@ -63,21 +63,21 @@ export default function ContactLensesContent() {
         <AnimateOnScroll stagger>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <ShieldCheck size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Rigid Gas Permeable (RGP)</h3>
               <p className="step-desc">Made from acrylate or fluorosilicone materials, RGP lenses allow maximum oxygen transmission to the cornea. They are highly durable and provide superior optical clarity for precise vision correction.</p>
             </div>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Droplets size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Soft Lenses</h3>
               <p className="step-desc">Made from water-absorbing plastics, soft lenses are pliable and comfortable from the first wear. Ideal for sports and active lifestyles, with silicone variants available for extended overnight wear.</p>
             </div>
             <div className="step-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(212,145,110,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(74,111,165,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <RefreshCw size={28} color="var(--primary)" />
               </div>
               <h3 style={{ fontSize: 18, fontWeight: 700 }}>Disposable Lenses</h3>
@@ -117,8 +117,8 @@ export default function ContactLensesContent() {
               ))}
             </div>
             <div style={{
-              background: 'rgba(212,145,110,0.08)',
-              border: '1px solid rgba(212,145,110,0.2)',
+              background: 'rgba(74,111,165,0.08)',
+              border: '1px solid rgba(74,111,165,0.2)',
               borderRadius: 'var(--radius-lg)',
               padding: 32,
               display: 'flex',
@@ -177,7 +177,7 @@ export default function ContactLensesContent() {
         <AnimateOnScroll>
           <div className="section-header" style={{ marginBottom: 48 }}>
             <h2 className="section-title centered" style={{ color: 'var(--text-light)' }}>Professional Lens Fitting</h2>
-            <p className="section-subtitle centered" style={{ color: 'rgba(243,235,226,0.6)', textAlign: 'center' }}>
+            <p className="section-subtitle centered" style={{ color: 'rgba(232,237,245,0.6)', textAlign: 'center' }}>
               A precise lens fitting is the foundation of safe, comfortable contact lens wear.
             </p>
           </div>
@@ -185,7 +185,7 @@ export default function ContactLensesContent() {
         <AnimateOnScroll stagger>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <ScanEye size={28} color="var(--primary)" />
               </div>
               <h3>Comprehensive Eye Assessment</h3>
@@ -194,7 +194,7 @@ export default function ContactLensesContent() {
               </p>
             </div>
             <div className="tech-card">
-              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(243,235,226,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'rgba(232,237,245,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Glasses size={28} color="var(--primary)" />
               </div>
               <h3>Trial & Training</h3>
@@ -274,7 +274,7 @@ export default function ContactLensesContent() {
         <h2 style={{ fontSize: 42, fontWeight: 700, color: 'var(--text-light)', letterSpacing: -0.5 }}>
           Find Your Perfect Lenses
         </h2>
-        <p style={{ fontSize: 16, color: 'rgba(243,235,226,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 16, color: 'rgba(232,237,245,0.8)', maxWidth: 600, lineHeight: 1.6 }}>
           Whether you are a first-time wearer or looking to upgrade, our specialists will fit you with the ideal contact lenses for your eyes and lifestyle.
         </p>
         <div className="cta-buttons">

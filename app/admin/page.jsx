@@ -44,7 +44,7 @@ export default function AdminDashboard() {
       value: stats.appointments,
       subtitle: `${stats.pendingAppointments} pending`,
       icon: CalendarDays,
-      color: '#D4916E',
+      color: '#4A6FA5',
     },
     {
       label: 'Enquiries',
