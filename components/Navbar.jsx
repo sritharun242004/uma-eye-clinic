@@ -2,8 +2,10 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Eye, Calendar, Menu, X, ChevronDown } from 'lucide-react'
+import { Calendar, Menu, X, ChevronDown } from 'lucide-react'
+import { IMAGES } from '@/lib/images'
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -112,7 +114,7 @@ export default function Navbar() {
     <nav className="navbar" ref={navRef}>
       <div className="navbar-inner">
         <Link href="/" className="navbar-logo" onClick={handleLinkClick}>
-          <Eye size={24} color="#D4916E" />
+          <Image src={IMAGES.logo} alt="" width={32} height={32} className="navbar-logo-img" />
           <span>Uma Eye Clinic</span>
         </Link>
 

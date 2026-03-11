@@ -1,9 +1,11 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { signOut } from 'next-auth/react'
-import { Eye, LayoutDashboard, Users, FileText, MessageSquare, CalendarDays, LogOut } from 'lucide-react'
+import { LayoutDashboard, Users, FileText, MessageSquare, CalendarDays, LogOut } from 'lucide-react'
+import { IMAGES } from '@/lib/images'
 
 const sidebarItems = [
   { href: '/admin', label: 'Dashboard', icon: LayoutDashboard },
@@ -32,7 +34,7 @@ export default function AdminLayout({ children }) {
       }}>
         <div style={{ padding: '24px 20px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
           <Link href="/admin" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none', color: '#fff' }}>
-            <Eye size={24} color="#D4916E" />
+            <Image src={IMAGES.logo} alt="" width={24} height={24} style={{ flexShrink: 0 }} />
             <span style={{ fontSize: 16, fontWeight: 700 }}>Uma Eye Clinic</span>
           </Link>
         </div>

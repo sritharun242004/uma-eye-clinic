@@ -1,5 +1,7 @@
 import Link from 'next/link'
-import { Eye, MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube, Twitter } from 'lucide-react'
+import Image from 'next/image'
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube, Twitter } from 'lucide-react'
+import { IMAGES } from '@/lib/images'
 
 export default function Footer() {
   return (
@@ -8,7 +10,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-col footer-brand">
             <Link href="/" className="footer-logo">
-              <Eye size={24} color="#D4916E" />
+              <Image src={IMAGES.logo} alt="" width={28} height={28} className="footer-logo-img" />
               <span>Uma Eye Clinic</span>
             </Link>
             <p className="footer-desc">Chennai's trusted eye care centre, pioneering advanced ophthalmic solutions since 1984.</p>

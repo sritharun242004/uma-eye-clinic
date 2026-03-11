@@ -43,9 +43,9 @@ export default function HomeContent() {
     { name: 'Dr. Aadithreya Varman', role: 'M.S., Director of Uma Eye Clinic', image: '/images/doctors/aadithreya-varman.webp' },
     { name: 'Dr. Venkateshar Ravisankar', role: 'Vitreo-Retinal Surgeon', image: '/images/doctors/venkateshar-ravisankar.webp' },
     { name: 'Dr. M. P. Veenashree', role: 'Corneal Surgeon', image: '/images/doctors/m-p-veenashree.webp' },
-    { name: 'Dr. Uma Ramesh', role: 'Squint & Pediatric', image: '/images/doctors/team-member-9.webp' },
-    { name: 'Dr. Kasinathan N', role: 'Retina', image: '/images/doctors/team-member-10.webp' },
-    { name: 'Dr. Prithi Udhay', role: 'Oculoplasty & Facial Aesthetics', image: '/images/doctors/team-member-11.webp' },
+    { name: 'Dr. Uma Ramesh', role: 'Squint & Pediatric', image: '/images/doctors/team-member-10.webp' },
+    { name: 'Dr. Kasinathan N', role: 'Retina', image: '/images/doctors/team-member-11.webp' },
+    { name: 'Dr. Prithi Udhay', role: 'Oculoplasty & Facial Aesthetics', image: '/images/doctors/team-member-9.webp' },
   ]
 
   const testimonials = [
@@ -61,7 +61,7 @@ export default function HomeContent() {
     <>
       {/* Hero with rotating banners */}
       <AnimateOnScroll>
-        <section className="hero" style={{ position: 'relative' }}>
+        <section className="hero">
           {banners.map((banner, i) => (
             <img
               key={i}
@@ -75,13 +75,13 @@ export default function HomeContent() {
               }}
             />
           ))}
-          <div style={{ position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-end', padding: '0 64px 72px', minHeight: 600 }}>
-            <div style={{ display: 'flex', gap: 16 }}>
+          <div className="home-hero-content">
+            <div className="home-hero-actions">
               <Link href="/contact" className="hero-cta-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '18px 40px', fontSize: 16, fontWeight: 700, borderRadius: 50, background: 'var(--primary)', color: '#fff', textDecoration: 'none', boxShadow: '0 6px 28px rgba(212,145,110,0.5)', animation: 'heroPulse 2s ease-in-out infinite' }}>
                 <Calendar size={20} />
                 Book an Appointment
               </Link>
-              <Link href="/treatments" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '18px 40px', fontSize: 16, fontWeight: 700, borderRadius: 50, background: '#fff', color: 'var(--text-primary)', textDecoration: 'none', boxShadow: '0 4px 16px rgba(0,0,0,0.15)' }}>
+              <Link href="/treatments" className="home-hero-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '18px 40px', fontSize: 16, fontWeight: 700, borderRadius: 50, background: '#fff', color: 'var(--text-primary)', textDecoration: 'none', boxShadow: '0 4px 16px rgba(0,0,0,0.15)' }}>
                 Explore Treatments <ArrowRight size={18} />
               </Link>
             </div>
@@ -323,11 +323,11 @@ export default function HomeContent() {
 
       {/* Awards Section */}
       <AnimateOnScroll>
-        <section style={{ background: 'var(--bg-cream)', borderRadius: 'var(--radius-lg)', padding: '60px 48px' }}>
-          <h2 style={{ fontSize: 28, fontWeight: 700, color: 'var(--text-primary)', textAlign: 'center', marginBottom: 40 }}>Awards & Achievements</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32, maxWidth: 800, margin: '0 auto' }}>
+        <section className="home-awards-section">
+          <h2 className="home-awards-title">Awards & Achievements</h2>
+          <div className="home-awards-grid">
             {[IMAGES.award1, IMAGES.award2, IMAGES.award3].map((img, i) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div key={i} className="home-awards-item">
                 <img src={img} alt={`Award ${i + 1}`} style={{ width: 180, height: 180, objectFit: 'contain' }} />
               </div>
             ))}
@@ -337,7 +337,7 @@ export default function HomeContent() {
 
       {/* Video Thumbnails Section */}
       <AnimateOnScroll>
-        <section style={{ background: 'var(--bg-white)', borderRadius: 'var(--radius-lg)', padding: '80px 48px' }}>
+        <section className="home-videos-section">
           <div className="section-header-row">
             <div>
               <div className="section-label">
@@ -350,7 +350,7 @@ export default function HomeContent() {
               View All Videos <ArrowRight size={16} />
             </Link>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 20, marginTop: 48 }}>
+          <div className="home-videos-grid">
             {[
               { ytId: 'lvYxlDD8yg8', title: 'SMILE Pro Procedure' },
               { ytId: 'X4P8tY76Sdk', title: 'Modern Cataract Surgery' },
@@ -358,10 +358,10 @@ export default function HomeContent() {
               { ytId: 'JSo5apXWeqQ', title: 'Eye Test At Home' },
               { ytId: 'H7yiwL1Q5LM', title: 'Eye Floaters' },
             ].map((vid, i) => (
-              <a href={`https://www.youtube.com/watch?v=${vid.ytId}`} target="_blank" rel="noopener noreferrer" key={i} style={{ position: 'relative', borderRadius: 'var(--radius-lg)', overflow: 'hidden', display: 'block' }}>
+              <a href={`https://www.youtube.com/watch?v=${vid.ytId}`} target="_blank" rel="noopener noreferrer" key={i} className="home-video-thumb">
                 <img src={`https://img.youtube.com/vi/${vid.ytId}/hqdefault.jpg`} alt={vid.title} style={{ width: '100%', height: 180, objectFit: 'cover' }} />
-                <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.2)' }}>
-                  <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'rgba(212,145,110,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div className="home-video-overlay">
+                  <div className="home-video-play">
                     <Play size={20} fill="white" color="white" />
                   </div>
                 </div>
