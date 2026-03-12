@@ -14,23 +14,42 @@ export async function POST(request) {
       )
     }
 
-    const appointment = await prisma.appointment.create({
-      data: {
-        name,
-        phone,
-        email,
-        date: date || '',
-        time: time || '',
-        doctor: doctor || '',
-        treatment: treatment || '',
-        message,
-      },
-    })
+    const payload = {
+      name,
+      phone,
+      email,
+      date: date || '',
+      time: time || '',
+      doctor: doctor || '',
+      treatment: treatment || '',
+      message,
+    }
 
-    // Send notification emails (non-blocking)
-    sendAppointmentNotification(appointment).catch(console.error)
+    try {
+      const appointment = await prisma.appointment.create({ data: payload })
 
-    return NextResponse.json({ success: true, id: appointment.id })
+      // Send notification emails (non-blocking)
+      sendAppointmentNotification(appointment).catch(console.error)
+
+      return NextResponse.json({ success: true, id: appointment.id, stored: true })
+    } catch (dbError) {
+      // If DB is unavailable, still try to notify via email so users aren't blocked.
+      console.error('Appointment DB error:', dbError)
+
+      if (!process.env.SMTP_HOST) {
+        return NextResponse.json(
+          { error: 'Service temporarily unavailable' },
+          { status: 503 }
+        )
+      }
+
+      const pseudoAppointment = { id: `temp_${Date.now()}`, ...payload }
+      sendAppointmentNotification(pseudoAppointment).catch(console.error)
+      return NextResponse.json(
+        { success: true, id: pseudoAppointment.id, stored: false },
+        { status: 202 }
+      )
+    }
   } catch (error) {
     console.error('Appointment booking error:', error)
     return NextResponse.json(

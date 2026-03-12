@@ -14,14 +14,32 @@ export async function POST(request) {
       )
     }
 
-    const contact = await prisma.contactSubmission.create({
-      data: { name, email, phone, subject, message },
-    })
+    const payload = { name, email, phone, subject, message }
 
-    // Send notification email (non-blocking)
-    sendContactNotification(contact).catch(console.error)
+    try {
+      const contact = await prisma.contactSubmission.create({ data: payload })
 
-    return NextResponse.json({ success: true, id: contact.id })
+      // Send notification email (non-blocking)
+      sendContactNotification(contact).catch(console.error)
+
+      return NextResponse.json({ success: true, id: contact.id, stored: true })
+    } catch (dbError) {
+      console.error('Contact DB error:', dbError)
+
+      if (!process.env.SMTP_HOST) {
+        return NextResponse.json(
+          { error: 'Service temporarily unavailable' },
+          { status: 503 }
+        )
+      }
+
+      const pseudoContact = { id: `temp_${Date.now()}`, ...payload }
+      sendContactNotification(pseudoContact).catch(console.error)
+      return NextResponse.json(
+        { success: true, id: pseudoContact.id, stored: false },
+        { status: 202 }
+      )
+    }
   } catch (error) {
     console.error('Contact submission error:', error)
     return NextResponse.json(
