@@ -5,7 +5,7 @@ import { Play, Video, Clock, X, ExternalLink } from 'lucide-react'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 import { IMAGES } from '@/lib/images'
 
-const YOUTUBE_CHANNEL = 'https://www.youtube.com/@umaeyeclinic'
+const YOUTUBE_CHANNEL = 'https://www.youtube.com/@umaeyeclinic7236/videos'
 
 const categories = [
   { id: 'all', label: 'All Videos' },
@@ -95,9 +95,9 @@ export default function VideosContent() {
   const handleVideoClick = (video) => {
     if (video.ytId || video.instagramReelId) {
       setPlayingVideo(video)
-    } else {
-      window.open(YOUTUBE_CHANNEL, '_blank', 'noopener')
+      return
     }
+    window.open(YOUTUBE_CHANNEL, '_blank', 'noopener')
   }
 
   const closePlayer = () => setPlayingVideo(null)
