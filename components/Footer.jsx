@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-col footer-brand">
             <Link href="/" className="footer-logo">
-              <Image src={IMAGES.logo} alt="" width={28} height={28} className="footer-logo-img" />
+              <Image src={IMAGES.footerLogo} alt="" width={28} height={28} className="footer-logo-img" />
               <span>Uma Eye Clinic</span>
             </Link>
             <p className="footer-desc">Chennai's trusted eye care centre, pioneering advanced ophthalmic solutions since 1984.</p>

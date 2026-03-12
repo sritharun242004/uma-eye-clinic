@@ -17,13 +17,6 @@ export default function HomeContent() {
     return () => clearInterval(interval)
   }, [banners.length])
 
-  const tickerItems = [
-    'SMILE PRO Surgery Now Available',
-    'NABH Accredited Hospital',
-    'Free Eye Screening Every Saturday',
-    'International Patient Services'
-  ]
-
   const services = [
     { icon: <ScanEye size={28} />, name: 'SMILE PRO', desc: 'Most advanced technology in refractive laser treatments, robotic precision, flapless', link: '/treatments' },
     { icon: <Eye size={28} />, name: 'Cataract', desc: 'Most commonly performed surgery worldwide, precision and skill', link: '/cataract' },
@@ -41,20 +34,20 @@ export default function HomeContent() {
     { name: 'Dr. N. V. Arulmozhi Varman', role: 'M.B.B.S, D.O, M.S Ophthalmology, Medical Director', image: '/images/doctors/arulmozhi-varman.webp' },
     { name: 'Mrs. Uma Varman', role: 'Admin Director', image: '/images/doctors/team-member-2.webp' },
     { name: 'Dr. Aadithreya Varman', role: 'M.S., Director of Uma Eye Clinic', image: '/images/doctors/aadithreya-varman.webp' },
-    { name: 'Dr. Venkateshar Ravisankar', role: 'Vitreo-Retinal Surgeon', image: '/images/doctors/venkateshar-ravisankar.webp' },
-    { name: 'Dr. M. P. Veenashree', role: 'Corneal Surgeon', image: '/images/doctors/m-p-veenashree.webp' },
-    { name: 'Dr. Uma Ramesh', role: 'Squint & Pediatric', image: '/images/doctors/team-member-10.webp' },
-    { name: 'Dr. Kasinathan N', role: 'Retina', image: '/images/doctors/team-member-11.webp' },
-    { name: 'Dr. Prithi Udhay', role: 'Oculoplasty & Facial Aesthetics', image: '/images/doctors/team-member-9.webp' },
+    { name: 'Dr. Venkateshar Ravisankar', role: 'Vitreo-Retinal Surgeon', image: '/images/doctors/Dr. Venkateshar Ravisankar.png' },
+    { name: 'Dr. M. P. Veenashree', role: 'Corneal Surgeon', image: '/images/doctors/Dr. M. P. Veenashree.png' },
+    { name: 'Dr. Uma Ramesh', role: 'Squint & Pediatric', image: '/images/doctors/Dr. Uma Ramesh.png' },
+    { name: 'Dr. Kasinathan N', role: 'Retina', image: '/images/doctors/Dr. Kasinathan N.png' },
+    { name: 'Dr. Prithi Udhay', role: 'Oculoplasty & Facial Aesthetics', image: '/images/doctors/Dr. Prithi Udhay.png' },
   ]
 
   const testimonials = [
-    { name: 'Preksha Dugar', procedure: 'SMILE PRO Surgery', quote: 'Dr. Aadithreya and the team were incredible. They made sure I was comfortable and informed at every step.', featured: true },
     { name: 'Rachel Regina', procedure: 'Eye Care', quote: 'Doctors at Uma Eye Clinic are true experts. They take great care of you.' },
     { name: 'Rupal Sancheti', procedure: 'SMILE PRO Surgery', quote: 'Got SMILE Pro surgery done a month ago. My vision has become much better.' },
     { name: 'Phyllis Edwards', procedure: 'General Eye Care', quote: 'Family has been patients for more than 15 years. Best experience.' },
     { name: 'Praveen Raj', procedure: 'SMILE Treatment', quote: 'Recently had SMILE treatment with Dr. Aadithreya Varman. Very pleased with results.' },
-    { name: 'Keerthana Thamburaj', procedure: 'Vision Correction', quote: 'Recently underwent vision correction. More than happy with results.' }
+    { name: 'Keerthana Thamburaj', procedure: 'Vision Correction', quote: 'Recently underwent vision correction. More than happy with results.' },
+    { name: 'Patient', procedure: 'General Eye Care', quote: 'Excellent care and professional team. Highly recommend Uma Eye Clinic.' }
   ]
 
   return (
@@ -87,20 +80,6 @@ export default function HomeContent() {
             </div>
           </div>
         </section>
-      </AnimateOnScroll>
-
-      {/* Announcement Ticker */}
-      <AnimateOnScroll>
-        <div className="announcement-ticker">
-          <div className="ticker-track">
-            {[...tickerItems, ...tickerItems].map((item, i) => (
-              <span className="ticker-item" key={i}>
-                <span className="orange-dot" />
-                {item}
-              </span>
-            ))}
-          </div>
-        </div>
       </AnimateOnScroll>
 
       {/* Trust Indicators */}
@@ -308,7 +287,7 @@ export default function HomeContent() {
               {doctors.map((doc, i) => (
                 <Link href="/doctors" className="doctor-card" key={i}>
                   <div className="doctor-image">
-                    <img src={doc.image} alt={doc.name} style={{width:'100%',height:'100%',objectFit:'cover'}} />
+                    <img src={doc.image} alt={doc.name} style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'top center'}} />
                   </div>
                   <div className="doctor-info">
                     <h3 className="doctor-name">{doc.name}</h3>

@@ -11,11 +11,11 @@ const doctors = [
   { id: '1', name: 'Dr. N. V. Arulmozhi Varman', designation: 'M.B.B.S, D.O, M.S Ophthalmology, Medical Director', image: '/images/doctors/arulmozhi-varman.webp' },
   { id: '2', name: 'Mrs. Uma Varman', designation: 'Admin Director', image: '/images/doctors/team-member-2.webp' },
   { id: '3', name: 'Dr. Aadithreya Varman', designation: 'M.S., Director of Uma Eye Clinic', image: '/images/doctors/aadithreya-varman.webp' },
-  { id: '4', name: 'Dr. Venkateshar Ravisankar', designation: 'Vitreo-Retinal Surgeon', image: '/images/doctors/venkateshar-ravisankar.webp' },
-  { id: '5', name: 'Dr. M. P. Veenashree', designation: 'Corneal Surgeon', image: '/images/doctors/m-p-veenashree.webp' },
-  { id: '6', name: 'Dr. Uma Ramesh', designation: 'Squint & Pediatric', image: '/images/doctors/team-member-10.webp' },
-  { id: '7', name: 'Dr. Kasinathan N', designation: 'Retina', image: '/images/doctors/team-member-11.webp' },
-  { id: '8', name: 'Dr. Prithi Udhay', designation: 'Oculoplasty & Facial Aesthetics', image: '/images/doctors/team-member-9.webp' },
+  { id: '4', name: 'Dr. Venkateshar Ravisankar', designation: 'Vitreo-Retinal Surgeon', image: '/images/doctors/Dr. Venkateshar Ravisankar.png' },
+  { id: '5', name: 'Dr. M. P. Veenashree', designation: 'Corneal Surgeon', image: '/images/doctors/Dr. M. P. Veenashree.png' },
+  { id: '6', name: 'Dr. Uma Ramesh', designation: 'Squint & Pediatric', image: '/images/doctors/Dr. Uma Ramesh.png' },
+  { id: '7', name: 'Dr. Kasinathan N', designation: 'Retina', image: '/images/doctors/Dr. Kasinathan N.png' },
+  { id: '8', name: 'Dr. Prithi Udhay', designation: 'Oculoplasty & Facial Aesthetics', image: '/images/doctors/Dr. Prithi Udhay.png' },
 ]
 
 export default function Doctors() {
@@ -49,23 +49,26 @@ export default function Doctors() {
               </div>
               <h2 className="section-title centered">Leaders in Eye Care</h2>
             </div>
-          </AnimateOnScroll>
-
-          <AnimateOnScroll stagger>
             <div className="doctors-grid">
               {doctors.map((doc) => (
-                <div key={doc.id} className="doctor-card-block">
-                  {doc.image ? (
-                    <img
-                      src={doc.image}
-                      alt={doc.name}
-                      className="doctor-card-block-img"
-                    />
-                  ) : (
-                    <div className="doctor-card-block-placeholder">
-                      <Users size={48} color="var(--primary)" style={{ opacity: 0.4 }} />
-                    </div>
-                  )}
+                <div
+                  key={doc.id}
+                  className="doctor-card-block"
+                >
+                  <div className="doctor-card-block-img-wrap">
+                    {doc.image ? (
+                      <img
+                        src={doc.image}
+                        alt={doc.name}
+                        className="doctor-card-block-img"
+                        style={{ objectPosition: 'top center' }}
+                      />
+                    ) : (
+                      <div className="doctor-card-block-placeholder">
+                        <Users size={48} color="var(--primary)" style={{ opacity: 0.4 }} />
+                      </div>
+                    )}
+                  </div>
                   <div className="doctor-card-block-info">
                     <h4 className="doctor-card-block-name">{doc.name}</h4>
                     <p className="doctor-card-block-designation">{doc.designation}</p>

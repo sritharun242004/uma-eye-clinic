@@ -41,9 +41,9 @@ const navItems = [
     children: [
       { href: '/videos', label: 'Videos' },
       { href: '/international', label: 'Medical Tourism' },
-      { href: '/blog', label: 'Blogs' },
     ],
   },
+  { href: '/blog', label: 'Blogs' },
 ]
 
 export default function Navbar() {
