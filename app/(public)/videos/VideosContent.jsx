@@ -229,7 +229,7 @@ export default function VideosContent() {
             ) : playingVideo.instagramReelId ? (
               <div style={{ padding: '20px 20px 0', minHeight: 560 }}>
                 <iframe
-                  src={`https://www.instagram.com/reel/${playingVideo.instagramReelId}/embed/`}
+                  src={`https://www.instagram.com/p/${playingVideo.instagramReelId}/embed/captioned/`}
                   title={playingVideo.title}
                   style={{
                     width: '100%', maxWidth: 540, height: 960, border: 'none',
