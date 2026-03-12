@@ -50,6 +50,13 @@ const videos = [
   { id: 27, title: 'SMILE vs LASIK: Which Is Right For You?', category: 'lasik', description: 'Major differences explained to help patients choose the right procedure.', thumb: '/images/media/thumb/smile-vs-lasik.webp' },
   { id: 28, title: 'Robotic Surgery at Uma Eye Clinic', category: 'educational', description: 'Advanced robotic surgery technology for precision eye care.', thumb: '/images/media/thumb/robotic.webp' },
   { id: 29, title: 'Glass Free Reading After Presbyond', category: 'presbyond', description: 'Freedom from reading glasses with Presbyond laser treatment.', thumb: '/images/media/thumb/glass-free-reading.webp' },
+
+  // Instagram Reels
+  { id: 30, instagramReelId: 'DVVuiHQEyPj', title: 'SMILE Pro – Uma Eye Clinic', category: 'smile-pro', description: 'SMILE Pro laser vision correction at Uma Eye Clinic.', thumb: '/images/media/thumb/smile-pro-8.webp' },
+  { id: 31, instagramReelId: 'DULIvZck_dN', title: 'SMILE Pro – Patient Experience', category: 'smile-pro', description: 'Patient experience with SMILE Pro procedure.', thumb: '/images/media/thumb/smile-pro-8.webp' },
+  { id: 32, instagramReelId: 'DVLaylYk5lS', title: 'Presbyond – Glass-Free Vision', category: 'presbyond', description: 'Presbyond treatment for clear vision after 40.', thumb: '/images/media/thumb/presbyond.webp' },
+  { id: 33, instagramReelId: 'DUA24VEk0ot', title: 'Cataract Surgery – Uma Eye Clinic', category: 'cataract', description: 'Cataract surgery and lens replacement at Uma Eye Clinic.', thumb: '/images/media/thumb/premium.webp' },
+  { id: 34, instagramReelId: 'DUTAa8UE_Rc', title: 'Presbyond – Laser Blended Vision', category: 'presbyond', description: 'Presbyond laser blended vision for reading and distance.', thumb: '/images/media/thumb/presbyond.webp' },
 ]
 
 const categoryLabels = {
@@ -72,6 +79,8 @@ const categoryTagClasses = {
 
 function getThumb(video) {
   if (video.ytId) return `https://img.youtube.com/vi/${video.ytId}/hqdefault.jpg`
+  if (video.instagramReelId && video.thumb) return video.thumb
+  if (video.instagramReelId) return '/images/media/thumb/presbyond.webp' // fallback for Instagram
   return video.thumb
 }
 
@@ -84,7 +93,7 @@ export default function VideosContent() {
     : videos.filter(v => v.category === activeFilter)
 
   const handleVideoClick = (video) => {
-    if (video.ytId) {
+    if (video.ytId || video.instagramReelId) {
       setPlayingVideo(video)
     } else {
       window.open(YOUTUBE_CHANNEL, '_blank', 'noopener')
@@ -146,8 +155,8 @@ export default function VideosContent() {
                       Uma Eye Clinic
                     </span>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                      {video.ytId ? <Play size={12} className="meta-icon" /> : <ExternalLink size={12} className="meta-icon" />}
-                      {video.ytId ? 'Watch Now' : 'View on YouTube'}
+                      {(video.ytId || video.instagramReelId) ? <Play size={12} className="meta-icon" /> : <ExternalLink size={12} className="meta-icon" />}
+                      {(video.ytId || video.instagramReelId) ? 'Watch Now' : 'View on YouTube'}
                     </span>
                   </div>
                 </div>
@@ -200,18 +209,31 @@ export default function VideosContent() {
             >
               <X size={28} />
             </button>
-            <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-              <iframe
-                src={`https://www.youtube.com/embed/${playingVideo.ytId}?autoplay=1&rel=0`}
-                title={playingVideo.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                style={{
-                  position: 'absolute', top: 0, left: 0,
-                  width: '100%', height: '100%', border: 'none',
-                }}
-              />
-            </div>
+            {playingVideo.ytId ? (
+              <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                <iframe
+                  src={`https://www.youtube.com/embed/${playingVideo.ytId}?autoplay=1&rel=0`}
+                  title={playingVideo.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{
+                    position: 'absolute', top: 0, left: 0,
+                    width: '100%', height: '100%', border: 'none',
+                  }}
+                />
+              </div>
+            ) : playingVideo.instagramReelId ? (
+              <div style={{ padding: '20px 20px 0', minHeight: 560 }}>
+                <iframe
+                  src={`https://www.instagram.com/reel/${playingVideo.instagramReelId}/embed/`}
+                  title={playingVideo.title}
+                  style={{
+                    width: '100%', maxWidth: 540, height: 960, border: 'none',
+                    overflow: 'hidden', margin: '0 auto', display: 'block',
+                  }}
+                />
+              </div>
+            ) : null}
             <div style={{ padding: '16px 20px', color: '#fff' }}>
               <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: 600 }}>{playingVideo.title}</h3>
               <p style={{ margin: '8px 0 0', fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)' }}>{playingVideo.description}</p>

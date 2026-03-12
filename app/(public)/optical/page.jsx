@@ -81,7 +81,7 @@ export default function Optical() {
             <h2 className="section-title">Frames We Offer</h2>
             <p className="section-subtitle">A wide selection of frame types to suit every style, comfort and prescription need.</p>
           </div>
-          <div className="brand-grid">
+          <div className="brand-grid optical-frame-grid">
             {frameTypes.map((frame, i) => (
               <div className="brand-card" key={i}>
                 <div className="brand-name">{frame.name}</div>
@@ -119,21 +119,17 @@ export default function Optical() {
                 Book Appointment
               </Link>
             </div>
-            <div className="visit-map">
-              <div style={{
-                width: '100%',
-                height: '100%',
-                background: 'linear-gradient(135deg, #ddd, #bbb)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'var(--text-muted)',
-                fontSize: 14,
-                fontWeight: 500,
-              }}>
-                <MapPin size={24} style={{ marginRight: 8 }} />
-                Map Placeholder
-              </div>
+            <div className="visit-map" style={{ minHeight: 280 }}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0!2d80.2!3d13.09!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e8b1d3e8c7%3A0x2e3b1d3e8b1d3e8c!2sUma+Eye+Clinic!5e0!3m2!1sen!2sin!4v1"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: 280 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Uma Eye Clinic – Optical Showroom Location"
+              />
             </div>
           </div>
         </section>
