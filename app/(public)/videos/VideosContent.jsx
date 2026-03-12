@@ -6,6 +6,7 @@ import AnimateOnScroll from '@/components/AnimateOnScroll'
 import { IMAGES } from '@/lib/images'
 
 const YOUTUBE_CHANNEL = 'https://www.youtube.com/@umaeyeclinic7236/videos'
+const YOUTUBE_CHANNEL_SEARCH = 'https://www.youtube.com/@umaeyeclinic7236/search?query='
 
 const categories = [
   { id: 'all', label: 'All Videos' },
@@ -97,7 +98,10 @@ export default function VideosContent() {
       setPlayingVideo(video)
       return
     }
-    window.open(YOUTUBE_CHANNEL, '_blank', 'noopener')
+    // Some entries are curated captions without a mapped YouTube ID yet.
+    // Search within the clinic’s channel so users land on the exact video.
+    const q = encodeURIComponent(video.title || 'Uma Eye Clinic')
+    window.open(`${YOUTUBE_CHANNEL_SEARCH}${q}`, '_blank', 'noopener')
   }
 
   const closePlayer = () => setPlayingVideo(null)
@@ -156,7 +160,7 @@ export default function VideosContent() {
                     </span>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                       {(video.ytId || video.instagramReelId) ? <Play size={12} className="meta-icon" /> : <ExternalLink size={12} className="meta-icon" />}
-                      {(video.ytId || video.instagramReelId) ? 'Watch Now' : 'View on YouTube'}
+                      {(video.ytId || video.instagramReelId) ? 'Watch Now' : 'Find on YouTube'}
                     </span>
                   </div>
                 </div>
