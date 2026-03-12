@@ -40,11 +40,13 @@ For a fresh Vercel Postgres DB, you can instead run:
 npx prisma db push
 ```
 
-(Optional) Seed admin user:
+**Recommended** – Seed admin user and doctors (so the Contact page “Select Doctor” dropdown is populated from the database):
 
 ```bash
 npm run seed
 ```
+
+If you skip seeding, the contact form will still show a built-in list of doctors; for dynamic doctor management via Admin, run the seed.
 
 ## 4. Environment variables in Vercel
 

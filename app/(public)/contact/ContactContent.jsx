@@ -4,6 +4,18 @@ import { useState, useEffect } from 'react'
 import { MapPin, Phone, Mail, Clock, Send, Calendar, MessageCircle } from 'lucide-react'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
 
+// Fallback list when /api/doctors fails or DB has no doctors (e.g. production not seeded)
+const FALLBACK_DOCTORS = [
+  { id: '1', name: 'Dr. N. V. Arulmozhi Varman', designation: 'M.B.B.S, D.O, M.S Ophthalmology, Medical Director' },
+  { id: '2', name: 'Mrs. Uma Varman', designation: 'Admin Director' },
+  { id: '3', name: 'Dr. Aadithreya Varman', designation: 'M.S., Director of Uma Eye Clinic' },
+  { id: '4', name: 'Dr. Venkateshar Ravisankar', designation: 'Vitreo-Retinal Surgeon' },
+  { id: '5', name: 'Dr. M. P. Veenashree', designation: 'Corneal Surgeon' },
+  { id: '6', name: 'Dr. Uma Ramesh', designation: 'Squint & Pediatric' },
+  { id: '7', name: 'Dr. Kasinathan N', designation: 'Retina' },
+  { id: '8', name: 'Dr. Prithi Udhay', designation: 'Oculoplasty & Facial Aesthetics' },
+]
+
 export default function ContactContent() {
   const [formData, setFormData] = useState({
     name: '',
@@ -18,12 +30,17 @@ export default function ContactContent() {
   const [submitting, setSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState(null)
   const [doctors, setDoctors] = useState([])
+  const [doctorsLoading, setDoctorsLoading] = useState(true)
 
   useEffect(() => {
     fetch('/api/doctors')
-      .then(res => res.ok ? res.json() : [])
-      .then(data => setDoctors(data))
-      .catch(() => {})
+      .then(res => (res.ok ? res.json() : Promise.reject(new Error('API error'))))
+      .then(data => {
+        const list = Array.isArray(data) && data.length > 0 ? data : FALLBACK_DOCTORS
+        setDoctors(list)
+      })
+      .catch(() => setDoctors(FALLBACK_DOCTORS))
+      .finally(() => setDoctorsLoading(false))
   }, [])
 
   const handleChange = (e) => {
@@ -138,11 +155,14 @@ export default function ContactContent() {
                     className="form-select"
                     value={formData.doctor}
                     onChange={handleChange}
+                    disabled={doctorsLoading}
                   >
-                    <option value="">Select a doctor</option>
+                    <option value="">
+                      {doctorsLoading ? 'Loading doctors...' : 'Select a doctor'}
+                    </option>
                     {doctors.map(doc => (
                       <option key={doc.id} value={doc.name}>
-                        {doc.name} - {doc.designation}
+                        {doc.name} {doc.designation ? `- ${doc.designation}` : ''}
                       </option>
                     ))}
                   </select>
